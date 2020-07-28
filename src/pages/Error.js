@@ -1,0 +1,1 @@
+export const SERVER_ERROR = '服务器异常，请稍候再试';

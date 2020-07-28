@@ -1,0 +1,116 @@
+.index {
+	section {
+		padding: 0 24px;
+	}
+	.banner {
+    min-height: 400px;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    .banner_content{
+      position: relative;
+      z-index: 12;
+      .banner_title{
+        padding-bottom: 50px;
+        max-width: 550px;
+        margin: 130px auto 0 auto;
+      }
+    }
+    .banner_bg, .banner_bg2{
+      height: 100%;
+      background: #23b529;
+      transform: rotate(-5deg);
+      position: absolute;
+      width: 120%;
+      top: 71%;
+      left: -20px;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      background: linear-gradient(35deg, #1bc07e, #19b321);
+    }
+    .banner_bg2{
+      background:#F6F6F6;
+      transform: rotate(15deg);
+      left: initial;
+      right: 0;
+      z-index: 1;
+    }
+  }
+  .feature{
+    padding: 100px 50px;
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(35deg, #17C495, #23b529);
+    :global(.ant-col){
+      margin-top: 30px;
+    }
+    .card{
+      height: 350px;
+      // background: #fff;
+      border-radius: 10px;
+      // box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+      text-align: center;
+      transition: all 600ms 0ms ease;
+      padding-top: 70px;
+      .image{
+        width: 128px;
+        height: 128px;
+        border-radius: 50%;
+        background: #fff;
+        margin: 0 auto 30px auto;
+        transition: all 600ms 0ms ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+          height: 40%;
+          width: 40%;
+        }
+        &.bg_location{
+          background: linear-gradient(135deg ,#85ea2e, #11c71f);
+        }
+        &.bg_checkwork{
+          background: linear-gradient(135deg ,#FF5858, #FF1F1F);
+          // background: linear-gradient(135deg ,#A883FA, #6B6DDF);
+        }
+        &.bg_announcement{
+          background: linear-gradient(135deg ,#1AE2CB, #0BBED5);
+        }
+        &.bg_message {
+          background: linear-gradient(135deg ,#F8D737, #FCC100);
+        }
+        &.bg_team {
+          background: linear-gradient(135deg ,#69A6F8, #106ECE);
+        }
+        &.bg_safe{
+          background: linear-gradient(135deg ,#FF4B4B, #D80000);
+          // background: linear-gradient(135deg ,#A883FA, #6B6DDF);
+        }
+      }
+      .title{
+        color: #fff;
+        transition: all 600ms 0ms ease;
+      }
+      .desc{
+        display: none;
+      }
+    }
+    .card:hover{
+      background: #fff;
+      transform: translateY(-10px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      .image {
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+      .title {
+        color: #000;
+      }
+    }
+  }
+  .customers{
+    // height: 240px;
+    padding: 100px 50px;
+    background: #fff;
+  }
+}

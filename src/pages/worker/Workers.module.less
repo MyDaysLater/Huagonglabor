@@ -1,0 +1,33 @@
+.cardPanel{
+  & :global(.ant-card-body){
+    padding: 0;
+  }
+  .layout{
+    min-height: 300px;
+    height: 600px;
+    display: flex;
+    .sider{
+      height: 100%;
+      width: 200px;
+      min-width: 200px;
+      border-right: 1px solid #eee;
+      overflow: auto;
+    }
+    .content{
+      height: 100%;
+      overflow: auto;
+      flex: 1;
+      & :global(.ant-table-wrapper){
+        margin-top: 1px;
+      }
+      & :global(.ant-pagination){
+        padding-right: 15px;
+      }
+    }
+  }
+}
+.actions{
+  Button{
+    margin-left: 8px;
+  }
+}
