@@ -1,0 +1,135 @@
+.app1 {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/loginImg/background.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.login {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 969px;
+  height: 485px;
+  display: flex;
+}
+.login .loginLeft {
+  flex: 1;
+  background-color: white;
+}
+.login .loginLeft .loginLeft_bg {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/loginImg/beijing1.png");
+  position: relative;
+}
+.login .loginLeft .loginLeft_bg .loginLeft_font {
+  width: 210px;
+  height: 31px;
+  line-height: 31px;
+  text-align: left;
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 26px;
+  position: absolute;
+  left: 32px;
+  top: 106px;
+}
+.login .loginLeft .loginLeft_bg .loginLeft_a {
+  text-align: left;
+  line-height: 22px;
+  width: 289px;
+  height: 22px;
+  font-size: 16px;
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+  color: #ffffff;
+  position: absolute;
+  left: 32px;
+  top: 207px;
+}
+.login .loginLeft .loginLeft_bg .loginLeft_b {
+  text-align: left;
+  line-height: 17px;
+  width: 129px;
+  height: 17px;
+  font-size: 12px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #ffffff;
+  position: absolute;
+  left: 32px;
+  top: 249px;
+}
+.login .loginLeft .loginLeft_bg .loginLeft_icon {
+  position: absolute;
+  left: 32px;
+  top: 321px;
+  width: 49px;
+  height: 49px;
+}
+.login .loginLeft .loginLeft_bg .loginLeft_login {
+  width: 72px;
+  height: 24px;
+  font-size: 16px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #ffffff;
+  position: absolute;
+  left: 96px;
+  top: 335px;
+}
+.login .loginRight {
+  flex: 1;
+  height: 485px;
+}
+.login .loginRight .signContainer {
+  max-width: 485px;
+  height: 485px;
+  position: relative;
+}
+.login .loginRight .signContainer .loginTitle {
+  margin-top: 56px;
+  height: 56px;
+  margin-left: 30px;
+}
+.login .loginRight .signContainer .loginTitle .loginTitle_left {
+  width: 96px;
+  height: 24px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  font-size: 16px;
+  color: #2ec99f;
+  position: absolute;
+  left: 30px;
+  top: 56px;
+}
+.login .loginRight .signContainer .loginTitle .loginTitle_right {
+  width: 56px;
+  height: 14px;
+  font-size: 10px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #798088;
+  position: absolute;
+  left: 177px;
+  top: 64px;
+}
+.signForm {
+  position: absolute;
+  left: 31px;
+  top: 142px;
+  width: 420px;
+  height: 233px;
+}
+.signForm #userChange {
+  height: 50px;
+}
+.signForm .signFormForgot {
+  float: right;
+}
+.signForm .signFormButton {
+  width: 100%;
+}

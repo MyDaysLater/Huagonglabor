@@ -8,13 +8,14 @@ import './screen.css';
 @inject('corp')
 @inject('user')
 @observer
+// 定义一个Screen类组件
 class Screen extends Component {
     state = {
 
     }
+    // 构造函数
     constructor(props) {
         super(props);
-
     }
     companyScroll(e, value) {
 
@@ -25,8 +26,11 @@ class Screen extends Component {
     }
 
     handleSubmit = (e) => {
+       
         const { uploadarr } = this.props;
         e.preventDefault();
+        // 阻止默认事件
+        // 表单验证
         this.props.form.validateFields(async (err, values) => {
             if (!err) {
                 this.props.screen(values);
@@ -38,19 +42,19 @@ class Screen extends Component {
         let {
             screen_list = [],
             form,
-
         } = this.props;
         let { } = this.state;
         const { getFieldDecorator } = form;
         const formItemLayout = {
+            // 布局
             labelCol: {
                 xs: { span: 24 },
-                sm: { span: 8 },
+                sm: { span: 8 },//左边留白
                 md: { span: 8 }
             },
             wrapperCol: {
                 xs: { span: 24 },
-                sm: { span: 10 },
+                sm: { span: 10 },//右边留白
                 md: { span: 10 }
             }
         };
@@ -77,8 +81,8 @@ class Screen extends Component {
                                         key={item.key}>
 
                                         {getFieldDecorator(item.key, {
-                                            rules: [{ required: true, message: `${item.placeholder || '填入搜索'}`, whitespace: true }]
-                                        })(<Input placeholder={item.placeholder || '填入搜索'} />)}
+                                            rules: [{ required: true, message: `${item.placeholder || '公司名称'}`, whitespace: true }]
+                                        })(<Input placeholder={item.placeholder || '公司名称'} />)}
                                     </Form.Item>
                                 </Col>
                             ) : (
@@ -87,7 +91,7 @@ class Screen extends Component {
                                             key={item.key}
                                             width={100}
                                         >
-                                            {getFieldDecorator(item.key)(<Input placeholder={item.placeholder || '填入搜索'} />)}
+                                            {getFieldDecorator(item.key)(<Input placeholder={item.placeholder || '公司名称'} />)}
                                         </Form.Item>
                                     </Col>
                                 )
@@ -97,8 +101,8 @@ class Screen extends Component {
                                     <Form.Item label={item.title}
                                         key={item.key}>
                                         {getFieldDecorator(item.key, {
-                                            rules: [{ required: true, type: 'object', message: `${item.placeholder || '填入搜索'}`, whitespace: true }],
-                                        })(<DatePicker onChange={this.date_change.bind(this, item.key)} placeholder={item.placeholder || '填入搜索'} />)}
+                                            rules: [{ required: true, type: 'object', message: `${item.placeholder || '公司名称'}`, whitespace: true }],
+                                        })(<DatePicker onChange={this.date_change.bind(this, item.key)} placeholder={item.placeholder || '公司名称'} />)}
                                     </Form.Item>
                                 </Col>
                             ) : (
@@ -109,7 +113,7 @@ class Screen extends Component {
                                                 {
 
                                                 }
-                                            )(<DatePicker onChange={this.date_change.bind(this, item.key)} placeholder={item.placeholder || '填入搜索'} />)}
+                                            )(<DatePicker onChange={this.date_change.bind(this, item.key)} placeholder={item.placeholder || '请输入关键词'} />)}
                                         </Form.Item>
                                     </Col>
                                 )
@@ -185,6 +189,7 @@ class Screen extends Component {
                         >
                             {expand ? <UpOutlined /> : <DownOutlined />} Collapse
           </a> */}
+          
                     </Col>
                 </Row>
 

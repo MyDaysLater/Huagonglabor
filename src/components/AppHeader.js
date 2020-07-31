@@ -3,6 +3,8 @@ import { inject, observer } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
 import { Layout, Avatar, Icon, Dropdown, Menu } from 'antd';
 import styles from './AppHeader.module.less';
+import Daohang from '../images/Apphearedimg/daohang-icon.png'
+import Logo from '../images/Apphearedimg/logo.png'
 // import NoticePopover from './NoticePopover';
 import { signIn } from '../routeConfig';
 const { Header } = Layout;
@@ -64,30 +66,11 @@ class AppHeader extends Component {
 		);
 		return (
 			<Header className={styles.header}>
-				{trigger && (
-					<div className={styles.trigger} onClick={this.menuTrigger.bind(this)}>
-						<Icon type={menuFold ? 'menu-unfold' : 'menu-fold'} className={styles.icon} />
-					</div>
-				)}
-				{title}
-				<div className={styles.actions}>
-					{/* <span className={styles.actionItem}>
-						<Icon className={styles.menuIcon} type="question-circle" />
-					</span>
-					<NoticePopover>
-						<span className={styles.actionItem}>
-							<Badge count={0}>
-								<Icon type="bell" className={styles.menuIcon} />
-							</Badge>
-						</span>
-					</NoticePopover> */}
-					<Dropdown overlay={menu}>
-						<span className={styles.actionItem}>
-							<Avatar icon="user" size="small" />
-							<span className={styles.label}>{userInfo.name || userInfo.email}</span>
-						</span>
-					</Dropdown>
-				</div>
+				<img className={styles.header_daohang}
+                 src={Daohang}
+				></img>
+                <img className={styles.header_logo} src={Logo}></img>
+				<span className={styles.header_font}>欢迎，使用华工劳务通管理系统!</span>
 			</Header>
 		);
 	}

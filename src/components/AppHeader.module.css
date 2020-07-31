@@ -1,0 +1,27 @@
+.header {
+  width: 100%;
+  height: 80px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.header .header_daohang {
+  width: 34px;
+  height: 34px;
+  margin-left: 38px;
+}
+.header .header_logo {
+  width: 34px;
+  height: 34px;
+  margin-left: 48px;
+}
+.header .header_font {
+  width: 199px;
+  height: 13px;
+  font-size: 5px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #cdcdcd;
+  line-height: 10px;
+  margin-left: 17px;
+}
