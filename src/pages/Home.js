@@ -407,6 +407,7 @@ class Home extends Component {
 				
 			]
 		})
+		var  getmydmcpr=['万科麓园','阳光花园','镇江A2期'];//数据点名称
 		var  getmydprice=[85140,78454,64154];//金钱
 		myChartRight_bottom.setOption({
 			title:{
@@ -431,16 +432,94 @@ class Home extends Component {
 				 axisPointer: {
 					 type: 'none'
 				 },
-				 formatter: function(params) {
-					 return '今日出勤日<br>'+ params[0].name  + ': ' + params[0].value+'%'
-				 }
 			 },
+			 xAxis: {
+				show: false,
+				type: 'value'
+			},
+			yAxis: [{
+				type: 'category',
+				inverse: true,
+				axisLabel: {
+					textStyle: {
+						color: '#666666',
+						fontSize: '14'
+					},
+				},
+				splitLine: {
+					show: false
+				},
+				axisTick: {
+					show: false
+				},
+				axisLine: {
+					show: false
+				},
+				data: getmydmcpr
+			}, {
+				type: 'category',
+				inverse: true,
+				axisTick: 'none',
+				axisLine: 'none',
+				show: true,
+				axisLabel: {
+					textStyle: {
+						color: '#333333',
+						fontSize: '14'
+					},
+					formatter: '{value}%'
+				},
+				data:getmydprice
+			}],
+			series: [{
+					name: '值',
+					type: 'bar',
+					zlevel: 1,
+					itemStyle: {
+						normal: {
+							barBorderRadius: 5,
+							color: '#2EC99F',
+							label: {
+								show: true,		//开启显示
+								position: 'inside',	//在上方显示
+								textStyle: {	    //数值样式
+									color: 'white',
+									fontSize: 12
+								}
+							}
+						},
+					},
+					barWidth: 15,
+					data: getmydprice
+				},
+			
+				{
+					name: '背景',
+					type: 'bar',
+					barWidth: 15,
+					barGap: '-100%',
+					data: getmydzd,
+					itemStyle: {
+						normal: {
+							color: 'rgba(103,150,253,0.3)',
+							barBorderRadius: 5,
+						}
+					},
+				},
+			]
 		})
 	}
 
 	render() {
 		return (
 		  <div className="home">
+			  <div className="homeHeared">
+				  <div className="homeHeared_img ">
+				  </div>
+				  <div className="homeHeared_img "></div>
+				  <div className="homeHeared_img "></div>
+				  <div className="homeHeared_img "></div>
+			  </div>
 			  <div className="homeConter">
 			  <div className="homeLeft">
                   <div id="mychart"></div>
