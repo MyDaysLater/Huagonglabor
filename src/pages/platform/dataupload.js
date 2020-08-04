@@ -3,7 +3,7 @@ import Page from "../../components/Page";
 import { withRouter } from "react-router-dom";
 import { getconfigs, putconfig } from "../../services/platform";
 import { PageHeader, Form, Tabs, message ,DatePicker, Button, Col, Row, Input, Select, } from "antd";
-
+import "../StylePenetration/dataupload.module.less"
 import Wages from './wages';//工资
 import Participating from './Participating';//参建单位
 import Training from './training';//培训
@@ -69,7 +69,7 @@ class dataupload extends Component {
     };
     return (
       <Page >
-        <PageHeader title="数据上传" style={{background:"rgba(249,249,249,1)"}} />
+        <PageHeader className="dataploadPageHeader" title="数据上传" style={{background:"rgba(249,249,249,1)"}}>
         <Form className="sousuo" {...formItemLayout} onSubmit={this.handleSubmit} style={{ borderRadius: '5px', marginBottom: '10px', padding: '0 0 5px 5px' }}>
                 <Row gutter={24}>
                     {screen_list.map((item, index) => {
@@ -193,6 +193,7 @@ class dataupload extends Component {
                 </Row>
 
             </Form>
+            </PageHeader>
         <Page.Content>
           <Page.Content.Panel >
             <Tabs defaultActiveKey="1" activeKey={tabActiveKey} tabPosition="left" onChange={this.callback.bind(this)}>

@@ -17,11 +17,6 @@ class Home extends Component {
 		let mychartBootom = echarts.init(document.getElementById("mychartbootom"));
 		let myChartRight = echarts.init(document.getElementById("mychartRight"));
 		let myChartRight_bottom = echarts.init(document.getElementById("mychartRight_bottom"));
-// 		font-size:18px;
-// font-family:Microsoft YaHei;
-// font-weight:400;
-// color:rgba(37,50,62,1)
-
 		myChart.setOption({
 			title: {
 				text: '今日考勤情况',
